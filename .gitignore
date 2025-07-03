@@ -13,3 +13,8 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+/HRIS/.vs/HRIS/v17/.suo
+/HRIS/.vs/HRIS/v17/DocumentLayout.json
+/HRIS/.vs/ProjectEvaluation/hris.metadata.v9.bin
+/HRIS/.vs/ProjectEvaluation/hris.projects.v9.bin
+/HRIS/.vs/ProjectEvaluation/hris.strings.v9.bin
