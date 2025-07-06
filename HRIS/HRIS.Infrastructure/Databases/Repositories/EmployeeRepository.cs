@@ -10,7 +10,7 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
 {
     public EmployeeRepository(HRISDbContext context) : base(context) { }
 
-    public async Task<IEnumerable<Employee>> GetEmployeesAsync(Expression<Func<Employee, bool>>? expression, CancellationToken token = default)
+    public async Task<IEnumerable<Employee>> GetEmployeesAsync(Expression<Func<Employee, bool>>? expression, CancellationToken cancellationToken = default)
     {
         var employees = expression is null ? 
             GetAll() : GetByExpression(expression);
@@ -20,6 +20,6 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
             .Include(tbl => tbl.Addresses)
             .AsSplitQuery()
             .AsNoTracking()
-            .ToListAsync(token);
+            .ToListAsync(cancellationToken);
     }
 }

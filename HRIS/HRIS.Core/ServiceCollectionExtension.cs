@@ -1,3 +1,5 @@
+using System.Reflection;
+using HRIS.Core.Pipelines;
 using HRIS.Core.Requests;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -5,13 +7,16 @@ namespace HRIS.Core;
 
 public static class ServiceCollectionExtension
 {
-    public static void AddCore(this IServiceCollection services) =>
+    public static void AddCore(this IServiceCollection services)
+    {
         services.AddRequestSenderAndHandlers();
+        services.AddPipelines();
+    }
 
     private static void AddRequestSenderAndHandlers(this IServiceCollection services)
     {
         // Register handlers
-        var handlerTypes = typeof(DipendencyInjectionAssembly).Assembly
+        var handlerTypes = Assembly.GetExecutingAssembly()
             .GetTypes()
             .Where(t => t.GetInterfaces().Any(i =>
                 i.IsGenericType &&
@@ -29,4 +34,7 @@ public static class ServiceCollectionExtension
         // Register sender
         services.AddScoped<IRequestSender, RequestSender>();
     }
+
+    private static void AddPipelines(this IServiceCollection services) =>
+        services.AddScoped(typeof(IPipeline<,>), typeof(DbTransactionPipeline<,>));
 }
