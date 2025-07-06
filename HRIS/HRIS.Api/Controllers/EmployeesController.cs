@@ -1,6 +1,6 @@
 using HRIS.Core.Queries.Employees;
 using HRIS.Core.Requests;
-using HRIS.Infrastructure.Databases.Entities;
+using HRIS.Shared.Models.Employees;
 using HRIS.Shared.Results;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +13,7 @@ public class EmployeesController(IRequestSender sender) : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetEmployeesAsync()
     {
-        var result = await sender.SendAsync<GetEmployeesQuery, Result<IEnumerable<Employee>, Error>>(new GetEmployeesQuery());
+        var result = await sender.SendAsync<GetEmployeesQuery, Result<IEnumerable<EmployeeDto>, Error>>(new GetEmployeesQuery());
         return Ok(result);
     }
 }

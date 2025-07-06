@@ -11,6 +11,7 @@ public static class ServiceCollectionExtension
     {
         services.AddRequestSenderAndHandlers();
         services.AddPipelines();
+        services.AddAutoMapper(Assembly.GetExecutingAssembly());
     }
 
     private static void AddRequestSenderAndHandlers(this IServiceCollection services)
