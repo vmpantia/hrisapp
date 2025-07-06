@@ -16,7 +16,7 @@ public static class ServiceCollectionExtension
     }
     
     private static void AddDbContexts(this IServiceCollection services, IConfiguration configuration) =>
-        services.AddDbContext<HRISDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("HRIS")));
+        services.AddDbContext<HRISDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("MigrationDb")));
 
     private static void AddRepositories(this IServiceCollection services) =>
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();

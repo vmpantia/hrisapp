@@ -11,18 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668a150-6108-498c-859e-74bfbe6381c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Core/Requests/IRequestSender.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Core/Requests/RequestExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Core/Requests/RequestSender.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/20250706113721_Initial.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/20250706113721_Initial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/HRISDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Api/Controllers/WeatherForecastController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/HRIS.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/HRIS.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Api/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Extensions/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/ServiceCollectionExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Extensions/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/ServiceCollectionExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Shared/Results/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Result.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/ServiceCollectionExtension.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +54,7 @@
     <setting file="file://$PROJECT_DIR$/HRIS.Core/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Infrastructure/bin/Debug/net9.0/HRIS.Infrastructure.deps.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Infrastructure/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Shared/Results/Result.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Shared/bin/Debug/net9.0/HRIS.Shared.deps.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Shared/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -122,7 +118,7 @@
       <updated>1751524444145</updated>
       <workItem from="1751524445268" duration="5833000" />
       <workItem from="1751530361590" duration="882000" />
-      <workItem from="1751800645430" duration="813000" />
+      <workItem from="1751800645430" duration="1237000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Add initial project.">
       <option name="closed" value="true" />
@@ -156,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751530614591</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Minor: Make RequestSender.cs works.">
+      <option name="closed" value="true" />
+      <created>1751801663075</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1751801663075</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +185,8 @@
     <MESSAGE value="Minor: Add .gitignore" />
     <MESSAGE value="Feat: Implement result pattern" />
     <MESSAGE value="Feat: Add Web Api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: Add Web Api" />
+    <MESSAGE value="Minor: Make RequestSender.cs works." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor: Make RequestSender.cs works." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
