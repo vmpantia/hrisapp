@@ -11,4 +11,9 @@
         <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\HRIS.Core\HRIS.Core.csproj" />
+      <ProjectReference Include="..\HRIS.Shared\HRIS.Shared.csproj" />
+    </ItemGroup>
+
 </Project>

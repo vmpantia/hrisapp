@@ -4,6 +4,8 @@ public class Result<TData, TError>
     where TData : class
     where TError : Error
 {
+    public Result() { }
+    
     private Result(TData data)
     {
         Data = data;

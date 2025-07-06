@@ -5,20 +5,19 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HRIS.Infrastructure.Extensions;
+namespace HRIS.Infrastructure;
 
 public static class ServiceCollectionExtension
 {
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContexts(configuration);
+        services.AddRepositories();
     }
     
     private static void AddDbContexts(this IServiceCollection services, IConfiguration configuration) =>
         services.AddDbContext<HRISDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("HRIS")));
 
-    private static void AddRepositories(this IServiceCollection services)
-    {
+    private static void AddRepositories(this IServiceCollection services) =>
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-    }
 }
