@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HRIS.Infrastructure.Databases.Repositories.Contracts;
 
-public class BaseRepository<TEntity>
+public class BaseRepository<TEntity> : IBaseRepository<TEntity>
     where TEntity : BaseEntity
 {
     private readonly HRISDbContext _context;
     private readonly DbSet<TEntity> _table;
 
-    public BaseRepository(HRISDbContext context)
+    protected BaseRepository(HRISDbContext context)
     {
         _context = context;
         _table = context.Set<TEntity>();
@@ -21,15 +21,19 @@ public class BaseRepository<TEntity>
     
     public IQueryable<TEntity> GetByExpression(Expression<Func<TEntity, bool>> expression) => _table;
 
-    public async Task CreateAsync(TEntity entity, CancellationToken token = default)
+    public async Task<TEntity> CreateAsync(TEntity entity, CancellationToken cancellationToken = default)
     {
-        await _table.AddAsync(entity, token);
-        await _context.SaveChangesAsync(token);
+        var result = await _table.AddAsync(entity, cancellationToken);
+        await _context.SaveChangesAsync(cancellationToken);
+        
+        return result.Entity;
     }
 
-    public async Task UpdateAsync(TEntity entity, CancellationToken token = default)
+    public async Task<TEntity> UpdateAsync(TEntity entity, CancellationToken cancellationToken = default)
     {
-        _table.Update(entity);
-        await _context.SaveChangesAsync(token);
+        var result = _table.Update(entity);
+        await _context.SaveChangesAsync(cancellationToken);
+        
+        return result.Entity;
     }
 }

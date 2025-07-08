@@ -8,6 +8,6 @@ public interface IBaseRepository<TEntity>
 {
     IQueryable<TEntity> GetAll();
     IQueryable<TEntity> GetByExpression(Expression<Func<TEntity, bool>> expression);
-    Task CreateAsync(TEntity entity, CancellationToken token = default);
-    Task UpdateAsync(TEntity entity, CancellationToken token = default);
+    Task<TEntity> CreateAsync(TEntity entity, CancellationToken cancellationToken = default);
+    Task<TEntity> UpdateAsync(TEntity entity, CancellationToken cancellationToken = default);
 }

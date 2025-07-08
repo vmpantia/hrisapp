@@ -7,10 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Commands\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\HRIS.Infrastructure\HRIS.Infrastructure.csproj" />
     </ItemGroup>
 

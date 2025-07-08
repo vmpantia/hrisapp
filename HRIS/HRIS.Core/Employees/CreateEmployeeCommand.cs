@@ -1,0 +1,27 @@
+using AutoMapper;
+using HRIS.Core.Requests;
+using HRIS.Infrastructure.Databases.Entities;
+using HRIS.Infrastructure.Databases.Repositories.Contracts;
+using HRIS.Shared.Models.Employees;
+using HRIS.Shared.Results;
+
+namespace HRIS.Core.Employees;
+
+public sealed record CreateEmployeeCommand(CreateEmployeeDto Employee) : IRequest<Result<EmployeeDto, Error>>;
+
+public sealed class CreateEmployeeCommandHandler(IEmployeeRepository repository, IMapper mapper) : IRequestHandler<CreateEmployeeCommand, Result<EmployeeDto, Error>>
+{
+    public async Task<Result<EmployeeDto, Error>> HandleAsync(CreateEmployeeCommand request, CancellationToken cancellationToken = default)
+    {
+        // Map request dto to an entity
+        var entity = mapper.Map<Employee>(request.Employee);
+        
+        // Create new entity on the database
+        var newEmployee = await repository.CreateAsync(entity,  cancellationToken);
+        
+        // Map new employee to dto (assuming it has a new primary keys)
+        var result = mapper.Map<EmployeeDto>(newEmployee);
+
+        return result;
+    }
+}

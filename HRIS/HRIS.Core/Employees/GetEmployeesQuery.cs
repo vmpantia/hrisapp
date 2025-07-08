@@ -5,11 +5,11 @@ using HRIS.Infrastructure.Databases.Repositories.Contracts;
 using HRIS.Shared.Models.Employees;
 using HRIS.Shared.Results;
 
-namespace HRIS.Core.Queries.Employees;
+namespace HRIS.Core.Employees;
 
-public class GetEmployeesQuery : IRequest<Result<IEnumerable<EmployeeDto>, Error>>;
+public sealed class GetEmployeesQuery : IRequest<Result<IEnumerable<EmployeeDto>, Error>>;
 
-public class GetEmployeesQueryHandler(IEmployeeRepository repository, IMapper mapper) : IRequestHandler<GetEmployeesQuery, Result<IEnumerable<EmployeeDto>, Error>>
+public sealed class GetEmployeesQueryHandler(IEmployeeRepository repository, IMapper mapper) : IRequestHandler<GetEmployeesQuery, Result<IEnumerable<EmployeeDto>, Error>>
 {
     public async Task<Result<IEnumerable<EmployeeDto>, Error>> HandleAsync(GetEmployeesQuery request, CancellationToken token = default)
     {
