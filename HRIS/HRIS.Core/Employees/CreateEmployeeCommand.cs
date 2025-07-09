@@ -1,13 +1,24 @@
 using AutoMapper;
+using FluentValidation;
 using HRIS.Core.Requests;
 using HRIS.Infrastructure.Databases.Entities;
 using HRIS.Infrastructure.Databases.Repositories.Contracts;
 using HRIS.Shared.Models.Employees;
 using HRIS.Shared.Results;
+using HRIS.Shared.Validators;
 
 namespace HRIS.Core.Employees;
 
 public sealed record CreateEmployeeCommand(CreateEmployeeDto Employee) : IRequest<Result<EmployeeDto, Error>>;
+
+public sealed class CreateEmployeeCommandValidator : AbstractValidator<CreateEmployeeCommand>
+{
+    public CreateEmployeeCommandValidator()
+    {
+        RuleFor(p => p.Employee)
+            .SetValidator(new CreateEmployeeValidator());
+    }
+}
 
 public sealed class CreateEmployeeCommandHandler(IEmployeeRepository repository, IMapper mapper) : IRequestHandler<CreateEmployeeCommand, Result<EmployeeDto, Error>>
 {

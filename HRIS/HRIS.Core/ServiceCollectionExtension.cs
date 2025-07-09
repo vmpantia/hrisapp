@@ -2,6 +2,7 @@ using System.Reflection;
 using HRIS.Core.Pipelines;
 using HRIS.Core.Requests;
 using Microsoft.Extensions.DependencyInjection;
+using FluentValidation;
 
 namespace HRIS.Core;
 
@@ -12,6 +13,7 @@ public static class ServiceCollectionExtension
         services.AddRequestSenderAndHandlers();
         services.AddPipelines();
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
+        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
     }
 
     private static void AddRequestSenderAndHandlers(this IServiceCollection services)
@@ -36,6 +38,9 @@ public static class ServiceCollectionExtension
         services.AddScoped<IRequestSender, RequestSender>();
     }
 
-    private static void AddPipelines(this IServiceCollection services) =>
+    private static void AddPipelines(this IServiceCollection services)
+    {
         services.AddScoped(typeof(IPipeline<,>), typeof(DbTransactionPipeline<,>));
+        services.AddScoped(typeof(IPipeline<,>), typeof(ValidationPipeline<,>));
+    }
 }
