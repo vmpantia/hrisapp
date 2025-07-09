@@ -13,10 +13,14 @@ public sealed record CreateEmployeeCommand(CreateEmployeeDto Employee) : IReques
 
 public sealed class CreateEmployeeCommandValidator : AbstractValidator<CreateEmployeeCommand>
 {
-    public CreateEmployeeCommandValidator()
+    public CreateEmployeeCommandValidator(IEmployeeRepository employeeRepository)
     {
-        RuleFor(p => p.Employee)
+        RuleFor(cec => cec.Employee)
             .SetValidator(new CreateEmployeeValidator());
+
+        RuleFor(cec => cec.Employee)
+            .MustAsync(async (ced, ct) => await employeeRepository.IsExistAsync(e => e.FirstName != ced.FirstName && e.LastName != ced.LastName, ct))
+            .WithMessage("Employee first name and last name is already exist in the database.");
     }
 }
 

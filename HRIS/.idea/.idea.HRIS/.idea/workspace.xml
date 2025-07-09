@@ -11,14 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668a150-6108-498c-859e-74bfbe6381c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HRIS.Core/Pipelines/ValidationPipeline.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Shared/Validators/CreateEmployeeValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Core/Employees/CreateEmployeeCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Employees/CreateEmployeeCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/ServiceCollectionExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Shared/HRIS.Shared.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/HRIS.Shared.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/BaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/IBaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/IBaseRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +121,8 @@
       <workItem from="1751949585309" duration="97000" />
       <workItem from="1751949701180" duration="1437000" />
       <workItem from="1751954573854" duration="1632000" />
-      <workItem from="1752037988801" duration="602000" />
+      <workItem from="1752037988801" duration="769000" />
+      <workItem from="1752038827554" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Add initial project.">
       <option name="closed" value="true" />
@@ -190,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751951125068</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Minor: Implement ValidationPipeline.cs">
+      <option name="closed" value="true" />
+      <created>1752038752121</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752038752121</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +225,8 @@
     <MESSAGE value="Minor: Add initial migrations on the database." />
     <MESSAGE value="Feat: Implement pipelines" />
     <MESSAGE value="Feat: Implement API for creating employee." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: Implement API for creating employee." />
+    <MESSAGE value="Minor: Implement ValidationPipeline.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor: Implement ValidationPipeline.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -236,19 +243,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HRIS.Core/Pipelines/ValidationPipeline.cs</url>
-          <line>11</line>
-          <properties documentPath="C:\Users\vince\RiderProjects\hrisapp\HRIS\HRIS.Core\Pipelines\ValidationPipeline.cs" containingFunctionPresentation="Method 'HandleAsync'">
-            <startOffsets>
-              <option value="557" />
-            </startOffsets>
-            <endOffsets>
-              <option value="604" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
