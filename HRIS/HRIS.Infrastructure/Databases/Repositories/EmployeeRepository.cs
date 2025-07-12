@@ -22,4 +22,10 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
             .AsNoTracking()
             .ToListAsync(cancellationToken);
     }
+
+    public Task<Employee?> GetEmployeeAsync(Guid id, CancellationToken cancellationToken = default) =>
+        GetByExpression(emp => emp.Id == id)
+            .Include(tbl => tbl.Contacts)
+            .Include(tbl => tbl.Addresses)
+            .FirstOrDefaultAsync(cancellationToken);
 }

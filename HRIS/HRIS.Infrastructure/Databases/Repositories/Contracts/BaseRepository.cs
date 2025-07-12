@@ -19,7 +19,7 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity>
     
     public IQueryable<TEntity> GetAll() => _table;
     
-    public IQueryable<TEntity> GetByExpression(Expression<Func<TEntity, bool>> expression) => _table;
+    public IQueryable<TEntity> GetByExpression(Expression<Func<TEntity, bool>> expression) => _table.Where(expression);
     
     public async Task<bool> IsExistAsync(Expression<Func<TEntity, bool>> expression, CancellationToken cancellationToken = default) =>
         await _table.AnyAsync(expression, cancellationToken);

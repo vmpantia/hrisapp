@@ -1,3 +1,5 @@
+using HRIS.Shared.Results.Errors;
+
 namespace HRIS.Shared.Results;
 
 public class Result<TData>

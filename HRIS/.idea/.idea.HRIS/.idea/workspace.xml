@@ -11,26 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668a150-6108-498c-859e-74bfbe6381c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HRIS.Shared/Extensions/FluentValidationExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Errors/DefaultError.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Core/Employees/GetEmployeeByIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Errors/EmployeeError.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Api/Controllers/BaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/Controllers/BaseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Employees/CreateEmployeeCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Employees/CreateEmployeeCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Employees/GetEmployeesQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Employees/GetEmployeesQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/HRIS.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/HRIS.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Pipelines/DbTransactionPipeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Pipelines/DbTransactionPipeline.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Pipelines/IPipeline.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Pipelines/PipelineExecutor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Pipelines/ValidationPipeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Pipelines/ValidationPipeline.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Requests/IRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Requests/IRequestHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Requests/IRequestSender.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Requests/RequestExtension.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/Requests/RequestSender.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Core/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/ServiceCollectionExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Shared/Results/Error.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Error.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/BaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/IEmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/IEmployeeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/EmployeeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Shared/Results/Error.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Errors/Error.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Shared/Results/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Result.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" afterDir="false" />
     </list>
@@ -66,6 +55,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/017cb25f4df0427a85b1809e327451b246c00/db/e2602ee7/ServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/b8/3e08f498/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dffdaf205cf54e098aa7d66ba76b38621de920/82/9f8e7f2d/ActionMethodExecutor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12f8d680aa1c5ae78dc1fb7cf8212be01e323372dbe3b9b87360e27c58936a/IRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2fe2a2bc3633b22939dcc1bb3384021322674b24cdf72a5cdbd58db46e7cc27/AbstractValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3520bf5c151bbc5aed94ba6abea697eaaee2b96fe96341613fef02be1cc54/ValidationFailure.cs" root0="FORCE_HIGHLIGHTING" />
@@ -150,7 +140,7 @@
       <workItem from="1751954573854" duration="1632000" />
       <workItem from="1752037988801" duration="769000" />
       <workItem from="1752038827554" duration="715000" />
-      <workItem from="1752294160383" duration="3555000" />
+      <workItem from="1752294160383" duration="4185000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Add initial project.">
       <option name="closed" value="true" />
@@ -232,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752294507753</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Minor: Use MediatR">
+      <option name="closed" value="true" />
+      <created>1752297774347</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1752297774347</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +261,8 @@
     <MESSAGE value="Feat: Implement API for creating employee." />
     <MESSAGE value="Minor: Implement ValidationPipeline.cs" />
     <MESSAGE value="Minor: Implement BaseController.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor: Implement BaseController.cs" />
+    <MESSAGE value="Minor: Use MediatR" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor: Use MediatR" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -281,17 +280,30 @@
           <option name="timeStamp" value="3" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HRIS.Shared/Results/Errors/DefaultError.cs</url>
-          <line>7</line>
-          <properties documentPath="C:\Users\vince\RiderProjects\hrisapp\HRIS\HRIS.Shared\Results\Errors\DefaultError.cs" containingFunctionPresentation="Method 'Validation'">
+          <url>file://$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs</url>
+          <line>12</line>
+          <properties documentPath="C:\Users\vince\RiderProjects\hrisapp\HRIS\HRIS.Api\Controllers\EmployeesController.cs" containingFunctionPresentation="Method 'GetEmployeeByIdAsync'">
             <startOffsets>
-              <option value="351" />
+              <option value="473" />
             </startOffsets>
             <endOffsets>
-              <option value="450" />
+              <option value="525" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HRIS.Core/Employees/GetEmployeeByIdQuery.cs</url>
+          <line>15</line>
+          <properties documentPath="C:\Users\vince\RiderProjects\hrisapp\HRIS\HRIS.Core\Employees\GetEmployeeByIdQuery.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="598" />
+            </startOffsets>
+            <endOffsets>
+              <option value="678" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
