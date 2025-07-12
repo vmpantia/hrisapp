@@ -24,13 +24,6 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity>
     public async Task<bool> IsExistAsync(Expression<Func<TEntity, bool>> expression, CancellationToken cancellationToken = default) =>
         await _table.AnyAsync(expression, cancellationToken);
 
-    public bool IsExist(Expression<Func<TEntity, bool>> expression, out TEntity? entity)
-    {
-        var result = _table.FirstOrDefault(expression);
-        entity = result;
-        return entity is not null;
-    }
-
     public async Task<TEntity> CreateAsync(TEntity entity, CancellationToken cancellationToken = default)
     {
         var result = await _table.AddAsync(entity, cancellationToken);

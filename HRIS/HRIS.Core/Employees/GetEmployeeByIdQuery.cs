@@ -13,6 +13,7 @@ public sealed class GetEmployeeByIdQueryHandler(IEmployeeRepository repository, 
 {
     public async Task<Result<EmployeeDto>> Handle(GetEmployeeByIdQuery request, CancellationToken cancellationToken)
     {
+        // Get employee from the database using id
         var employee = await repository.GetEmployeeAsync(request.Id, cancellationToken);
 
         // Check if an employee exists on the database

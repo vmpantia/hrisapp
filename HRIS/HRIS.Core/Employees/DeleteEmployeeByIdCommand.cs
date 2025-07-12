@@ -12,12 +12,15 @@ public sealed class DeleteEmployeeByIdCommandHandler(IEmployeeRepository reposit
 {
     public async Task<Result<string>> Handle(DeleteEmployeeByIdCommand request, CancellationToken cancellationToken)
     {
+        // Get employee from the database using id
+        var employee = await repository.GetEmployeeAsync(request.Id, cancellationToken);
+
         // Check if an employee exists on the database
-        if (!repository.IsExist(emp => emp.Id == request.Id, out var employee)) 
-            return EmployeeError.NotFound(request.Id);
+        if (employee is null) return EmployeeError.NotFound(request.Id);
         
         // Delete employee on the database
-        await repository.DeleteAsync(employee!, cancellationToken);
+        await repository.DeleteAsync(employee, cancellationToken);
+        
         return "Employee deleted successfully on the database.";
     }
 }

@@ -11,12 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668a150-6108-498c-859e-74bfbe6381c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HRIS.Core/Employees/DeleteEmployeeByIdCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Contexts/HRISDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Contexts/HRISDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Contracts/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Contracts/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Employees/DeleteEmployeeByIdCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Employees/DeleteEmployeeByIdCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Employees/GetEmployeeByIdQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Employees/GetEmployeeByIdQuery.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/BaseRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/IBaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/IBaseRepository.cs" afterDir="false" />
     </list>
@@ -58,6 +56,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3520bf5c151bbc5aed94ba6abea697eaaee2b96fe96341613fef02be1cc54/ValidationFailure.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9161da3da671f777cc3652d39696c23db97793e37cb97fcb4e1e87234e56322/ValidationException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Core/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Infrastructure/Databases/Entities/Contracts/BaseEntity.cs" root0="SKIP_HIGHLIGHTING" />
@@ -134,7 +133,7 @@
       <workItem from="1752037988801" duration="769000" />
       <workItem from="1752038827554" duration="715000" />
       <workItem from="1752294160383" duration="4528000" />
-      <workItem from="1752302607235" duration="2476000" />
+      <workItem from="1752302607235" duration="2909000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Add initial project.">
       <option name="closed" value="true" />
@@ -240,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752304215861</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Feat: Implement api for soft deleting employee">
+      <option name="closed" value="true" />
+      <created>1752305170351</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1752305170351</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +281,8 @@
     <MESSAGE value="Minor: Use MediatR" />
     <MESSAGE value="Feat: implement api for getting employee using id" />
     <MESSAGE value="Minor: Update base entity and create AuditEntitiesInterceptor.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor: Update base entity and create AuditEntitiesInterceptor.cs" />
+    <MESSAGE value="Feat: Implement api for soft deleting employee" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: Implement api for soft deleting employee" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
