@@ -1,12 +1,12 @@
 using FluentValidation;
-using HRIS.Core.Requests;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HRIS.Core.Pipelines;
 
-public class ValidationPipeline<TRequest, TResponse>(IServiceProvider serviceProvider) : IPipeline<TRequest, TResponse> where TRequest : IRequest<TResponse>
+public class ValidationPipeline<TRequest, TResponse>(IServiceProvider serviceProvider) : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {
-    public async Task<TResponse> HandleAsync(TRequest request, IPipeline<TRequest, TResponse>.RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken = default)
+    public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
         // Skip pipeline once the request name is not ends with Command
         if (!typeof(TRequest).Name.EndsWith("Command")) 

@@ -1,15 +1,15 @@
 using AutoMapper;
 using FluentValidation;
-using HRIS.Core.Requests;
 using HRIS.Infrastructure.Databases.Entities;
 using HRIS.Infrastructure.Databases.Repositories.Contracts;
 using HRIS.Shared.Models.Employees;
 using HRIS.Shared.Results;
 using HRIS.Shared.Validators;
+using MediatR;
 
 namespace HRIS.Core.Employees;
 
-public sealed record CreateEmployeeCommand(CreateEmployeeDto Employee) : IRequest<Result<EmployeeDto, Error>>;
+public sealed record CreateEmployeeCommand(CreateEmployeeDto Employee) : IRequest<Result<EmployeeDto>>;
 
 public sealed class CreateEmployeeCommandValidator : AbstractValidator<CreateEmployeeCommand>
 {
@@ -24,9 +24,9 @@ public sealed class CreateEmployeeCommandValidator : AbstractValidator<CreateEmp
     }
 }
 
-public sealed class CreateEmployeeCommandHandler(IEmployeeRepository repository, IMapper mapper) : IRequestHandler<CreateEmployeeCommand, Result<EmployeeDto, Error>>
+public sealed class CreateEmployeeCommandHandler(IEmployeeRepository repository, IMapper mapper) : IRequestHandler<CreateEmployeeCommand, Result<EmployeeDto>>
 {
-    public async Task<Result<EmployeeDto, Error>> HandleAsync(CreateEmployeeCommand request, CancellationToken cancellationToken = default)
+    public async Task<Result<EmployeeDto>> Handle(CreateEmployeeCommand request, CancellationToken cancellationToken = default)
     {
         // Map request dto to an entity
         var entity = mapper.Map<Employee>(request.Employee);

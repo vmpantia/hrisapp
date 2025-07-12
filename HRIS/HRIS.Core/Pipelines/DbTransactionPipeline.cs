@@ -1,11 +1,11 @@
 using System.Transactions;
-using HRIS.Core.Requests;
+using MediatR;
 
 namespace HRIS.Core.Pipelines;
 
-public class DbTransactionPipeline<TRequest, TResponse> : IPipeline<TRequest, TResponse> where TRequest : IRequest<TResponse>
+public class DbTransactionPipeline<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {
-    public async Task<TResponse> HandleAsync(TRequest request, IPipeline<TRequest, TResponse>.RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken = default)
+    public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
         // Skip pipeline once the request name is not ends with Command
         if (!typeof(TRequest).Name.EndsWith("Command")) 

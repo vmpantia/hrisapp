@@ -1,8 +1,7 @@
 namespace HRIS.Shared.Results;
 
-public class Result<TData, TError>
+public class Result<TData>
     where TData : class
-    where TError : Error
 {
     public Result() { }
     
@@ -13,7 +12,7 @@ public class Result<TData, TError>
         IsSuccess = true;
     }
 
-    private Result(TError error)
+    private Result(Error error)
     {
         Data = default;
         Error = error;
@@ -21,9 +20,9 @@ public class Result<TData, TError>
     }
 
     public TData? Data { get; init; }
-    public TError? Error { get; init; }
+    public Error? Error { get; init; }
     public bool IsSuccess { get; init; }
 
-    public static implicit operator Result<TData, TError>(TData data) => new(data);
-    public static implicit operator Result<TData, TError>(TError error) => new(error);
+    public static implicit operator Result<TData>(TData data) => new(data);
+    public static implicit operator Result<TData>(Error error) => new(error);
 }

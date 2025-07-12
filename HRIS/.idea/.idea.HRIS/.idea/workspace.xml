@@ -11,10 +11,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668a150-6108-498c-859e-74bfbe6381c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HRIS.Api/Controllers/BaseController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Shared/Extensions/FluentValidationExtension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Errors/DefaultError.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Api/Controllers/BaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/Controllers/BaseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Employees/CreateEmployeeCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Employees/CreateEmployeeCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Employees/GetEmployeesQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Employees/GetEmployeesQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/HRIS.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/HRIS.Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Pipelines/DbTransactionPipeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Pipelines/DbTransactionPipeline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Pipelines/IPipeline.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Pipelines/PipelineExecutor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Pipelines/ValidationPipeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Pipelines/ValidationPipeline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Requests/IRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Requests/IRequestHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Requests/IRequestSender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Requests/RequestExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Requests/RequestSender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/ServiceCollectionExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Shared/Results/Error.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Error.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Shared/Results/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Result.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,10 +66,18 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/017cb25f4df0427a85b1809e327451b246c00/db/e2602ee7/ServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/b8/3e08f498/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12f8d680aa1c5ae78dc1fb7cf8212be01e323372dbe3b9b87360e27c58936a/IRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2fe2a2bc3633b22939dcc1bb3384021322674b24cdf72a5cdbd58db46e7cc27/AbstractValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3520bf5c151bbc5aed94ba6abea697eaaee2b96fe96341613fef02be1cc54/ValidationFailure.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9161da3da671f777cc3652d39696c23db97793e37cb97fcb4e1e87234e56322/ValidationException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/Controllers/BaseController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/Controllers/EmployeesController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Core/Pipelines/IPipeline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Core/Pipelines/PipelineExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Core/Requests/IRequestHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Core/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Infrastructure/bin/Debug/net9.0/HRIS.Infrastructure.deps.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Infrastructure/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
@@ -125,7 +150,7 @@
       <workItem from="1751954573854" duration="1632000" />
       <workItem from="1752037988801" duration="769000" />
       <workItem from="1752038827554" duration="715000" />
-      <workItem from="1752294160383" duration="55000" />
+      <workItem from="1752294160383" duration="3555000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Add initial project.">
       <option name="closed" value="true" />
@@ -199,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752038752121</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Minor: Implement BaseController.cs">
+      <option name="closed" value="true" />
+      <created>1752294507753</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1752294507753</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +262,8 @@
     <MESSAGE value="Feat: Implement pipelines" />
     <MESSAGE value="Feat: Implement API for creating employee." />
     <MESSAGE value="Minor: Implement ValidationPipeline.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor: Implement ValidationPipeline.cs" />
+    <MESSAGE value="Minor: Implement BaseController.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor: Implement BaseController.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -247,17 +281,17 @@
           <option name="timeStamp" value="3" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HRIS.Api/Controllers/BaseController.cs</url>
-          <line>19</line>
-          <properties documentPath="C:\Users\vince\RiderProjects\hrisapp\HRIS\HRIS.Api\Controllers\BaseController.cs" containingFunctionPresentation="Method 'SendRequestAsync'">
+          <url>file://$PROJECT_DIR$/HRIS.Shared/Results/Errors/DefaultError.cs</url>
+          <line>7</line>
+          <properties documentPath="C:\Users\vince\RiderProjects\hrisapp\HRIS\HRIS.Shared\Results\Errors\DefaultError.cs" containingFunctionPresentation="Method 'Validation'">
             <startOffsets>
-              <option value="576" />
+              <option value="351" />
             </startOffsets>
             <endOffsets>
-              <option value="669" />
+              <option value="450" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
