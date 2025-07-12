@@ -16,5 +16,6 @@ public class EmployeeDto
     public IEnumerable<ContactDto> Contacts { get; set; }
     public IEnumerable<AddressDto> Addresses { get; set; }
     
-    public DateTime LastModifiedOn { get; set; }
+    public DateTime LastModifiedAt { get; set; }
+    public string LastModifiedBy { get; set; }
 }

@@ -13,4 +13,7 @@ public class AddressDto
     public string Country { get; set; }
 
     public string FullAddress => $"{Line1}, {Line2}, {Barangay}, {City}, {Province}, {PostalCode}, {Country}";
+    
+    public DateTime LastModifiedAt { get; set; }
+    public string LastModifiedBy { get; set; }
 }

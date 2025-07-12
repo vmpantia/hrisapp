@@ -8,4 +8,7 @@ public class ContactDto
     public ContactType Type { get; set; }
     public string Value { get; set; }
     public bool IsPrimary { get; set; }
+    
+    public DateTime LastModifiedAt { get; set; }
+    public string LastModifiedBy { get; set; }
 }

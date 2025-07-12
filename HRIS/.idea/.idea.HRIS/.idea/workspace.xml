@@ -11,17 +11,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668a150-6108-498c-859e-74bfbe6381c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HRIS.Core/Employees/GetEmployeeByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Errors/EmployeeError.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Interceptors/AuditEntitiesInterceptor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/BaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/IEmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/Contracts/IEmployeeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Repositories/EmployeeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Shared/Results/Error.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Errors/Error.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Shared/Results/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Results/Result.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Addresses/AddressProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Addresses/AddressProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Contacts/ContactProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Contacts/ContactProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Employees/CreateEmployeeCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Employees/CreateEmployeeCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Core/Employees/EmployeeProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Core/Employees/EmployeeProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Contracts/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Contracts/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/20250706113721_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/20250712070400_AddInitialTables.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/20250706113721_Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/20250712070400_AddInitialTables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/HRISDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/HRISDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/HRIS.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/HRIS.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/ServiceCollectionExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Shared/Models/Addresses/AddressDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Models/Addresses/AddressDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Shared/Models/Contacts/ContactDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Models/Contacts/ContactDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Shared/Models/Employees/EmployeeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Shared/Models/Employees/EmployeeDto.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,14 +67,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3520bf5c151bbc5aed94ba6abea697eaaee2b96fe96341613fef02be1cc54/ValidationFailure.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9161da3da671f777cc3652d39696c23db97793e37cb97fcb4e1e87234e56322/ValidationException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/Controllers/BaseController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/Controllers/EmployeesController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Core/Pipelines/IPipeline.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Core/Pipelines/PipelineExecutor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Core/Requests/IRequestHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Core/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Infrastructure/Databases/Entities/Contracts/BaseEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Infrastructure/ServiceCollectionExtension.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Infrastructure/bin/Debug/net9.0/HRIS.Infrastructure.deps.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Infrastructure/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Shared/bin/Debug/net9.0/HRIS.Shared.deps.json" root0="SKIP_HIGHLIGHTING" />
@@ -140,7 +141,8 @@
       <workItem from="1751954573854" duration="1632000" />
       <workItem from="1752037988801" duration="769000" />
       <workItem from="1752038827554" duration="715000" />
-      <workItem from="1752294160383" duration="4185000" />
+      <workItem from="1752294160383" duration="4528000" />
+      <workItem from="1752302607235" duration="1385000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Add initial project.">
       <option name="closed" value="true" />
@@ -230,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752297774347</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Feat: implement api for getting employee using id">
+      <option name="closed" value="true" />
+      <created>1752298493843</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1752298493843</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +272,8 @@
     <MESSAGE value="Minor: Implement ValidationPipeline.cs" />
     <MESSAGE value="Minor: Implement BaseController.cs" />
     <MESSAGE value="Minor: Use MediatR" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor: Use MediatR" />
+    <MESSAGE value="Feat: implement api for getting employee using id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: implement api for getting employee using id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -279,32 +290,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HRIS.Api/Controllers/EmployeesController.cs</url>
-          <line>12</line>
-          <properties documentPath="C:\Users\vince\RiderProjects\hrisapp\HRIS\HRIS.Api\Controllers\EmployeesController.cs" containingFunctionPresentation="Method 'GetEmployeeByIdAsync'">
-            <startOffsets>
-              <option value="473" />
-            </startOffsets>
-            <endOffsets>
-              <option value="525" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HRIS.Core/Employees/GetEmployeeByIdQuery.cs</url>
-          <line>15</line>
-          <properties documentPath="C:\Users\vince\RiderProjects\hrisapp\HRIS\HRIS.Core\Employees\GetEmployeeByIdQuery.cs" containingFunctionPresentation="Method 'Handle'">
-            <startOffsets>
-              <option value="598" />
-            </startOffsets>
-            <endOffsets>
-              <option value="678" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

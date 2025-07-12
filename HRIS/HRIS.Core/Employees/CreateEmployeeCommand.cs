@@ -19,7 +19,7 @@ public sealed class CreateEmployeeCommandValidator : AbstractValidator<CreateEmp
             .SetValidator(new CreateEmployeeValidator());
 
         RuleFor(cec => cec.Employee)
-            .MustAsync(async (ced, ct) => await employeeRepository.IsExistAsync(e => e.FirstName != ced.FirstName && e.LastName != ced.LastName, ct))
+            .MustAsync(async (ced, ct) => await employeeRepository.IsExistAsync(e => e.FirstName == ced.FirstName && e.LastName == ced.LastName, ct) == false)
             .WithMessage("Employee first name and last name is already exist in the database.");
     }
 }
