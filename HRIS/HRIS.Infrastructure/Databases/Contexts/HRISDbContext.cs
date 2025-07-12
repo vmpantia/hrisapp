@@ -24,6 +24,7 @@ public class HRISDbContext : DbContext
                 .WithOne(a => a.Employee)
                 .HasForeignKey(a => a.EmployeeId)
                 .IsRequired();
+            builder.HasQueryFilter(e => e.DeletedAt == null && string.IsNullOrEmpty(e.DeletedBy));
         });
 
         modelBuilder.Entity<Contact>(builder =>
@@ -33,6 +34,7 @@ public class HRISDbContext : DbContext
                 .WithMany(e => e.Contacts)
                 .HasForeignKey(c => c.EmployeeId)
                 .IsRequired();
+            builder.HasQueryFilter(e => e.DeletedAt == null && string.IsNullOrEmpty(e.DeletedBy));
         });
         
         modelBuilder.Entity<Address>(builder =>
@@ -42,6 +44,7 @@ public class HRISDbContext : DbContext
                 .WithMany(e => e.Addresses)
                 .HasForeignKey(a => a.EmployeeId)
                 .IsRequired();
+            builder.HasQueryFilter(e => e.DeletedAt == null && string.IsNullOrEmpty(e.DeletedBy));
         });
     }
 }

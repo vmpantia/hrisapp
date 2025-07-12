@@ -24,6 +24,13 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity>
     public async Task<bool> IsExistAsync(Expression<Func<TEntity, bool>> expression, CancellationToken cancellationToken = default) =>
         await _table.AnyAsync(expression, cancellationToken);
 
+    public bool IsExist(Expression<Func<TEntity, bool>> expression, out TEntity? entity)
+    {
+        var result = _table.FirstOrDefault(expression);
+        entity = result;
+        return entity is not null;
+    }
+
     public async Task<TEntity> CreateAsync(TEntity entity, CancellationToken cancellationToken = default)
     {
         var result = await _table.AddAsync(entity, cancellationToken);
@@ -38,5 +45,11 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity>
         await _context.SaveChangesAsync(cancellationToken);
         
         return result.Entity;
+    }
+
+    public async Task DeleteAsync(TEntity entity, CancellationToken cancellationToken = default)
+    {
+        _table.Remove(entity);
+        await _context.SaveChangesAsync(cancellationToken);
     }
 }

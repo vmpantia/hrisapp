@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace HRIS.Infrastructure.Databases.Entities.Contracts;
 
 public class BaseEntity
@@ -11,5 +9,4 @@ public class BaseEntity
     public string? ModifiedBy { get; set; }
     public DateTime? DeletedAt { get; set; }
     public string? DeletedBy { get; set; }
-    [NotMapped] public bool IsDeleted =>  DeletedAt is not null && !string.IsNullOrEmpty(DeletedBy);
 }
