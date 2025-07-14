@@ -13,8 +13,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668a150-6108-498c-859e-74bfbe6381c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Contracts/IAuditableEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Contracts/IIdentityEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Department.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Employment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Job.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Salary.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Shared/Enumerations/EmploymentType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Contexts/HRISDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Contexts/HRISDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Contracts/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Contracts/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Entities/Employee.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/20250712070400_AddInitialTables.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/20250712070400_AddInitialTables.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Infrastructure/Databases/Migrations/HRISDbContextModelSnapshot.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +67,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3520bf5c151bbc5aed94ba6abea697eaaee2b96fe96341613fef02be1cc54/ValidationFailure.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9161da3da671f777cc3652d39696c23db97793e37cb97fcb4e1e87234e56322/ValidationException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Core/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Infrastructure/Databases/Entities/Contracts/BaseEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Infrastructure/Databases/Entities/Employee.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Infrastructure/bin/Debug/net9.0/HRIS.Infrastructure.deps.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Infrastructure/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Shared/bin/Debug/net9.0/HRIS.Shared.deps.json" root0="SKIP_HIGHLIGHTING" />
@@ -202,6 +215,8 @@
       <workItem from="1752393448273" duration="2863000" />
       <workItem from="1752405235034" duration="169000" />
       <workItem from="1752411393268" duration="23000" />
+      <workItem from="1752478805390" duration="239000" />
+      <workItem from="1752480680986" duration="2869000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Add initial project.">
       <option name="closed" value="true" />
@@ -331,7 +346,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752404731977</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Minor: Delete HRIS.Web">
+      <option name="closed" value="true" />
+      <created>1752478875743</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1752478875743</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Minor: Update HRIS.sln">
+      <option name="closed" value="true" />
+      <created>1752478891875</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1752478891875</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +399,9 @@
     <MESSAGE value="Feat: Implement api for soft deleting employee" />
     <MESSAGE value="Minor: Update process on deleting records." />
     <MESSAGE value="Feat: Add HRIS.Web project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: Add HRIS.Web project." />
+    <MESSAGE value="Minor: Delete HRIS.Web" />
+    <MESSAGE value="Minor: Update HRIS.sln" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor: Update HRIS.sln" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

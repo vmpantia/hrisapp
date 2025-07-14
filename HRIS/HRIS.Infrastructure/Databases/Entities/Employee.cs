@@ -3,8 +3,9 @@ using HRIS.Shared.Enumerations;
 
 namespace HRIS.Infrastructure.Databases.Entities;
 
-public class Employee : BaseEntity
+public class Employee : BaseEntity, IIdentityEntity
 {
+    public Guid Id { get; set; }
     public string FirstName { get; set; }
     public string? MiddleName { get; set; }
     public string LastName { get; set; }
@@ -13,4 +14,5 @@ public class Employee : BaseEntity
     
     public virtual ICollection<Contact> Contacts { get; set; }
     public virtual ICollection<Address> Addresses { get; set; }
+    public virtual Employment Employment { get; set; }
 }

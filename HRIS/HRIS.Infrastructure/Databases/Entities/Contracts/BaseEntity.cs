@@ -1,8 +1,7 @@
 namespace HRIS.Infrastructure.Databases.Entities.Contracts;
 
-public class BaseEntity
+public class BaseEntity : IAuditableEntity
 {
-    public Guid Id { get; set; }
     public DateTime CreatedAt { get; set; }
     public string CreatedBy { get; set; }
     public DateTime? ModifiedAt { get; set; }
