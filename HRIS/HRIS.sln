@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRIS.Infrastructure", "HRIS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRIS.Api", "HRIS.Api\HRIS.Api.csproj", "{735B3CF1-80B8-484F-B79E-62EEE3A6A38F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRIS.Web", "HRIS.Web\HRIS.Web.csproj", "{5025A9D5-9290-4E85-BAEB-579BE46AAB36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{735B3CF1-80B8-484F-B79E-62EEE3A6A38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{735B3CF1-80B8-484F-B79E-62EEE3A6A38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{735B3CF1-80B8-484F-B79E-62EEE3A6A38F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5025A9D5-9290-4E85-BAEB-579BE46AAB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5025A9D5-9290-4E85-BAEB-579BE46AAB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5025A9D5-9290-4E85-BAEB-579BE46AAB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5025A9D5-9290-4E85-BAEB-579BE46AAB36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -15,11 +15,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668a150-6108-498c-859e-74bfbe6381c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/App.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/HRIS.Web.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Layout/MainLayout.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Layout/MainLayout.razor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Layout/NavMenu.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Layout/NavMenu.razor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Pages/Counter.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Pages/Home.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Pages/Weather.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/_Imports.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/icon-192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/wwwroot/sample-data/weather.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Api/HRIS.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/HRIS.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.sln" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +123,8 @@
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/Controllers/EmployeesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Core/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Infrastructure/bin/Debug/net9.0/HRIS.Infrastructure.deps.json" root0="SKIP_HIGHLIGHTING" />
@@ -86,9 +147,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.HRIS.Api: http.executor": "Run",
-    ".NET Launch Settings Profile.HRIS.Api: https.executor": "Debug",
+    ".NET Launch Settings Profile.HRIS.Api: https.executor": "Run",
     ".NET Launch Settings Profile.HRIS.Web: http.executor": "Run",
-    ".NET Launch Settings Profile.HRIS.Web: https.executor": "Run",
+    ".NET Launch Settings Profile.HRIS.Web: https.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
@@ -104,37 +165,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.HRIS.Api: https">
-    <configuration name="HRIS.ApiV2: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/HRIS.ApiV2/HRIS.ApiV2.csproj" />
-      <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
-      <option name="LAUNCH_PROFILE_NAME" value="http" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
-      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
-      <option name="SEND_DEBUG_REQUEST" value="1" />
-      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="HRIS.ApiV2: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/HRIS.ApiV2/HRIS.ApiV2.csproj" />
-      <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
-      <option name="LAUNCH_PROFILE_NAME" value="https" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
-      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
-      <option name="SEND_DEBUG_REQUEST" value="1" />
-      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Multi-Launch.Run Web &amp; API">
     <configuration name="HRIS.Api: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/HRIS.Api/HRIS.Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
@@ -142,6 +173,22 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="HRIS.Web: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/HRIS.Web/HRIS.Web.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="https" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <browser name="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
       <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
       <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
       <option name="SEND_DEBUG_REQUEST" value="1" />
@@ -159,6 +206,11 @@
             </ConditionSnapshot>
           </option>
           <option name="disableDebugging" value="true" />
+          <option name="executable">
+            <ExecutableSnapshot>
+              <option name="id" value="runConfig:.NET Launch Settings Profile.HRIS.Web: https" />
+            </ExecutableSnapshot>
+          </option>
         </ExecutableRowSnapshot>
         <ExecutableRowSnapshot>
           <option name="condition">
@@ -167,19 +219,24 @@
             </ConditionSnapshot>
           </option>
           <option name="disableDebugging" value="true" />
+          <option name="executable">
+            <ExecutableSnapshot>
+              <option name="id" value="runConfig:.NET Launch Settings Profile.HRIS.Api: https" />
+            </ExecutableSnapshot>
+          </option>
         </ExecutableRowSnapshot>
       </rows>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue=".NET Launch Settings Profile.HRIS.ApiV2: http" />
-      <item itemvalue=".NET Launch Settings Profile.HRIS.ApiV2: https" />
+      <item itemvalue=".NET Launch Settings Profile.HRIS.Web: https" />
       <item itemvalue=".NET Launch Settings Profile.HRIS.Api: https" />
       <item itemvalue="Multi-Launch.Run Web &amp; API" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue=".NET Launch Settings Profile.HRIS.Api: https" />
+        <item itemvalue=".NET Launch Settings Profile.HRIS.Web: https" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +263,9 @@
       <workItem from="1752478805390" duration="239000" />
       <workItem from="1752480680986" duration="3461000" />
       <workItem from="1752562617853" duration="271000" />
-      <workItem from="1752567434850" duration="4077000" />
+      <workItem from="1752567434850" duration="4325000" />
+      <workItem from="1752572010571" duration="231000" />
+      <workItem from="1752572271784" duration="466000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Add initial project.">
       <option name="closed" value="true" />
@@ -368,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752571158367</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Minor: Update swagger ui">
+      <option name="closed" value="true" />
+      <created>1752571648844</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1752571648844</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +476,8 @@
     <MESSAGE value="Minor: Update HRIS.sln" />
     <MESSAGE value="Feat: Add employee related tables" />
     <MESSAGE value="Feat: Implement user authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: Implement user authentication" />
+    <MESSAGE value="Minor: Update swagger ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor: Update swagger ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
