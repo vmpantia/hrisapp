@@ -2,6 +2,8 @@ using System.Reflection;
 using HRIS.Core.Pipelines;
 using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
+using HRIS.Core.Users;
+using HRIS.Core.Users.Contracts;
 
 namespace HRIS.Core;
 
@@ -12,6 +14,8 @@ public static class ServiceCollectionExtension
         services.AddMediatR();
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+        services.AddSingleton<ITokenProvider, TokenProvider>();
+        services.AddSingleton<IPasswordHasher, PasswordHasher>();
     }
 
     private static void AddMediatR(this IServiceCollection services) =>

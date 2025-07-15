@@ -33,6 +33,9 @@ public static class ServiceCollectionExtension
         });
     }
 
-    private static void AddRepositories(this IServiceCollection services) =>
+    private static void AddRepositories(this IServiceCollection services)
+    {
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+    }
 }

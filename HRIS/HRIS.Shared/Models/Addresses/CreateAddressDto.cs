@@ -1,6 +1,6 @@
 namespace HRIS.Shared.Models.Addresses;
 
-public class CreateAddressDto
+public sealed class CreateAddressDto
 {
     public string Line1 { get; set; }
     public string Line2 { get; set; }

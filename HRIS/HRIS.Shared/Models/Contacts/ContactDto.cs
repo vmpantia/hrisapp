@@ -2,7 +2,7 @@ using HRIS.Shared.Enumerations;
 
 namespace HRIS.Shared.Models.Contacts;
 
-public class ContactDto
+public sealed class ContactDto
 {
     public Guid EmployeeId { get; set; }
     public ContactType Type { get; set; }

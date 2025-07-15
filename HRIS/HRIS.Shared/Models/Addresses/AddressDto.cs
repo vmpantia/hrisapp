@@ -1,7 +1,7 @@
 
 namespace HRIS.Shared.Models.Addresses;
 
-public class AddressDto
+public sealed class AddressDto
 {
     public Guid EmployeeId { get; set; }
     public string Line1 { get; set; }

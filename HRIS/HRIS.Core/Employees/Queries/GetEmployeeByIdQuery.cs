@@ -5,7 +5,7 @@ using HRIS.Shared.Results;
 using HRIS.Shared.Results.Errors;
 using MediatR;
 
-namespace HRIS.Core.Employees;
+namespace HRIS.Core.Employees.Queries;
 
 public sealed record GetEmployeeByIdQuery(Guid Id) : IRequest<Result<EmployeeDto>>;
 

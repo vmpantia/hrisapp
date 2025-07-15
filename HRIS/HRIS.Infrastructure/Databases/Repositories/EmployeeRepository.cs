@@ -6,10 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HRIS.Infrastructure.Databases.Repositories;
 
-public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
+public sealed class EmployeeRepository(HRISDbContext context) : BaseRepository<Employee>(context), IEmployeeRepository
 {
-    public EmployeeRepository(HRISDbContext context) : base(context) { }
-
     public async Task<IEnumerable<Employee>> GetEmployeesAsync(Expression<Func<Employee, bool>>? expression, CancellationToken cancellationToken = default)
     {
         var employees = expression is null ? 
@@ -27,5 +25,5 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
         GetByExpression(emp => emp.Id == id)
             .Include(tbl => tbl.Contacts)
             .Include(tbl => tbl.Addresses)
-            .FirstOrDefaultAsync(cancellationToken);
+            .SingleOrDefaultAsync(cancellationToken);
 }

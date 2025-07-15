@@ -14,6 +14,7 @@ public class HRISDbContext : DbContext
     public DbSet<Job> Jobs { get; set; }
     public DbSet<Department> Departments { get; set; }
     public DbSet<Salary> Salaries { get; set; }
+    public DbSet<User> Users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -80,6 +81,12 @@ public class HRISDbContext : DbContext
                 .WithMany(e => e.Salaries)
                 .HasForeignKey(s => s.EmployeeId)
                 .IsRequired();
+            builder.HasQueryFilter(e => e.DeletedAt == null && string.IsNullOrEmpty(e.DeletedBy));
+        });
+        
+        modelBuilder.Entity<User>(builder =>
+        {
+            builder.HasKey(s => new { s.Id } );
             builder.HasQueryFilter(e => e.DeletedAt == null && string.IsNullOrEmpty(e.DeletedBy));
         });
     }

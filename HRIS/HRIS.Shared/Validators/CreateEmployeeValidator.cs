@@ -3,7 +3,7 @@ using HRIS.Shared.Models.Employees;
 
 namespace HRIS.Shared.Validators;
 
-public class CreateEmployeeValidator : AbstractValidator<CreateEmployeeDto>
+public sealed class CreateEmployeeValidator : AbstractValidator<CreateEmployeeDto>
 {
     public CreateEmployeeValidator()
     {

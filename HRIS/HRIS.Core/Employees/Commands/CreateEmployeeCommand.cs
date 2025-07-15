@@ -7,7 +7,7 @@ using HRIS.Shared.Results;
 using HRIS.Shared.Validators;
 using MediatR;
 
-namespace HRIS.Core.Employees;
+namespace HRIS.Core.Employees.Commands;
 
 public sealed record CreateEmployeeCommand(CreateEmployeeDto Employee) : IRequest<Result<EmployeeDto>>;
 

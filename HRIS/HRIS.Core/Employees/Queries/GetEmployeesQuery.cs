@@ -5,7 +5,7 @@ using HRIS.Shared.Models.Employees;
 using HRIS.Shared.Results;
 using MediatR;
 
-namespace HRIS.Core.Employees;
+namespace HRIS.Core.Employees.Queries;
 
 public sealed class GetEmployeesQuery : IRequest<Result<IEnumerable<EmployeeDto>>>;
 

@@ -4,7 +4,7 @@ using HRIS.Shared.Results;
 using HRIS.Shared.Results.Errors;
 using MediatR;
 
-namespace HRIS.Core.Employees;
+namespace HRIS.Core.Employees.Commands;
 
 public sealed record DeleteEmployeeByIdCommand(Guid Id) : IRequest<Result<string>>;
 

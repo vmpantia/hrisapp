@@ -4,7 +4,7 @@ using HRIS.Shared.Models.Contacts;
 
 namespace HRIS.Shared.Models.Employees;
 
-public class EmployeeDto
+public sealed class EmployeeDto
 {
     public Guid Id { get; set; }
     public string FirstName { get; set; }
