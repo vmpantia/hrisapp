@@ -60,21 +60,7 @@ public class HttpClientProvider(HttpClient httpClient,
             // Send the request and get the response
             var response = await httpClient.SendAsync(request);
             
-            // Throw unauthorized access when status code is Unauthorized
-            if (response.StatusCode is HttpStatusCode.Unauthorized)
-                throw new UnauthorizedAccessException($"User is not authorized to send a request on api {method}: {uri}.");
-            
-            // Read the response content
-            var content = await response.Content.ReadAsStringAsync();
-
-            // Convert the content to a result object
-            var result = JsonConvert.DeserializeObject<Result<TData>>(content);
-
-            // Check the result of the request
-            if (result is not null && result.IsSuccess && response.IsSuccessStatusCode)
-                return result.Data!;
-
-            throw new Exception(result?.Error?.Message ?? content);
+            return await HandleResponseAsync<TData>(request, response);
         }
         catch (UnauthorizedAccessException ex)
         {
@@ -89,5 +75,25 @@ public class HttpClientProvider(HttpClient httpClient,
             logger.LogError($"Method: {method} | Uri: {uri} | Error Message: {ex.Message}");
             throw;
         }
+    }
+
+    private async Task<TData> HandleResponseAsync<TData>(HttpRequestMessage request, HttpResponseMessage response) 
+        where TData : class
+    {
+        // Throw unauthorized access when status code is Unauthorized
+        if (response.StatusCode is HttpStatusCode.Unauthorized)
+            throw new UnauthorizedAccessException($"User is not authorized to send a request on api {request.Method}: {request.RequestUri}.");
+            
+        // Read the response content
+        var content = await response.Content.ReadAsStringAsync();
+
+        // Convert the content to a result object
+        var result = JsonConvert.DeserializeObject<Result<TData>>(content);
+
+        // Check the result of the request
+        if (result is not null && result.IsSuccess && response.IsSuccessStatusCode)
+            return result.Data!;
+
+        throw new Exception(result?.Error?.Message ?? content);
     }
 }

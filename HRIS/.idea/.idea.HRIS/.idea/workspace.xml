@@ -15,18 +15,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668a150-6108-498c-859e-74bfbe6381c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HRIS.Web/Pages/Authentication/Login.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Web/Providers/Contracts/IHttpClientProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Web/Providers/CustomAuthenticationStateProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Web/Providers/HttpClientProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Web/ServiceCollectionExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Web/Services/AuthenticationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HRIS.Web/Services/Contracts/IAuthenticationService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Layout/EmptyLayout.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Web/Pages/Authentication/Logout.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Web/HRIS.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Web/HRIS.Web.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Web/Layout/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Web/Layout/MainLayout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Web/Pages/Authentication/Login.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Web/Pages/Authentication/Login.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Web/Providers/HttpClientProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Web/Providers/HttpClientProvider.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +64,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3520bf5c151bbc5aed94ba6abea697eaaee2b96fe96341613fef02be1cc54/ValidationFailure.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9161da3da671f777cc3652d39696c23db97793e37cb97fcb4e1e87234e56322/ValidationException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Core/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Infrastructure/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HRIS.Shared/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -106,7 +104,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.HRIS.Web: https">
+  <component name="RunManager" selected="Multi-Launch.Run Web &amp; API">
     <configuration name="HRIS.Api: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/HRIS.Api/HRIS.Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
@@ -206,6 +204,8 @@
       <workItem from="1752572010571" duration="231000" />
       <workItem from="1752572271784" duration="466000" />
       <workItem from="1752643384717" duration="1305000" />
+      <workItem from="1752644770767" duration="1249000" />
+      <workItem from="1752647298339" duration="1491000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Add initial project.">
       <option name="closed" value="true" />
@@ -375,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752571648844</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Minor: Add Login.razor on HRIS.Web project">
+      <option name="closed" value="true" />
+      <created>1752645113975</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1752645113975</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +425,8 @@
     <MESSAGE value="Feat: Add employee related tables" />
     <MESSAGE value="Feat: Implement user authentication" />
     <MESSAGE value="Minor: Update swagger ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor: Update swagger ui" />
+    <MESSAGE value="Minor: Add Login.razor on HRIS.Web project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor: Add Login.razor on HRIS.Web project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -434,19 +443,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HRIS.Web/Providers/HttpClientProvider.cs</url>
-          <line>45</line>
-          <properties documentPath="C:\Users\vince\RiderProjects\hrisapp\HRIS\HRIS.Web\Providers\HttpClientProvider.cs" containingFunctionPresentation="Method 'SendRequestAsync'">
-            <startOffsets>
-              <option value="1631" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1681" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

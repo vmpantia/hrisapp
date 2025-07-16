@@ -2,6 +2,8 @@
 @using HRIS.Shared.Models.Users
 @using HRIS.Web.Services.Contracts
 
+@layout EmptyLayout
+
 <EditForm Model="_login" FormName="Login" OnValidSubmit="HandleLoginAsync">
     <DataAnnotationsValidator />
     <div class="form-group">
@@ -14,7 +16,6 @@
     </div>
     <button type="submit" class="btn btn-primary mt-3">Login</button>
 </EditForm>
-
 
 @code {
     [Inject] public IAuthenticationService AuthenticationService { get; set; }

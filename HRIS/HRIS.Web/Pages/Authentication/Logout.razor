@@ -1,0 +1,8 @@
+@page "/logout"
+@using HRIS.Web.Services.Contracts
+
+@code {
+    [Inject] public IAuthenticationService AuthenticationService { get; set; }
+    
+    protected override async Task OnInitializedAsync() => await AuthenticationService.LogoutAsync();
+}
