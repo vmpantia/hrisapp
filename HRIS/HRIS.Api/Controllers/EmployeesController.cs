@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace HRIS.Api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class EmployeesController(IMediator mediator) : BaseController(mediator)
 {
     [HttpGet, Authorize(Roles = nameof(UserType.Admin))]

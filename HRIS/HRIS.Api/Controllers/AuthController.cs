@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace HRIS.Api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class AuthController(IMediator mediator) : BaseController(mediator)
 {
     [HttpPost("Login")]
