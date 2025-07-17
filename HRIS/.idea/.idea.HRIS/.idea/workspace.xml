@@ -15,12 +15,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668a150-6108-498c-859e-74bfbe6381c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HRIS.Web/Controls/FluentValidationValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HRIS.Shared/ServiceCollectionExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HRIS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HRIS.Web/Components/Validations/FluentValidationValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Web/Components/Validations/FluentValidationValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Web/Pages/Authentication/Login.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Web/Pages/Authentication/Login.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HRIS.Web/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.Web/_Imports.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/HRIS.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +66,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ae33613f315b45bef5f35ba8c125838da77bfe6050cd41a998922a437b237b8/HeadOutlet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c58f9e7fb5ed9d1d5a4b3e928bfabc4171ab64d6b88e0ade465ce648390d12b/InputText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ecfc69314ec4c0c0f6b4c4c95f99652b39f8def19dbd22d6fddf716ad152fa/IValidationContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
@@ -77,8 +81,11 @@
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/Layout/EmptyLayout.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/Layout/MainLayout.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/Layout/MainLayout.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/Pages/Authentication/Login.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/_Imports.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/_Imports.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/_Imports.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/RiderProjects/hrisapp/HRIS/HRIS.Web/_Imports.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
@@ -182,8 +189,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue=".NET Launch Settings Profile.HRIS.Web: https" />
         <item itemvalue=".NET Launch Settings Profile.HRIS.Api: https" />
+        <item itemvalue=".NET Launch Settings Profile.HRIS.Web: https" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +224,7 @@
       <workItem from="1752644770767" duration="1249000" />
       <workItem from="1752647298339" duration="1491000" />
       <workItem from="1752731325234" duration="969000" />
-      <workItem from="1752737381982" duration="3272000" />
+      <workItem from="1752737381982" duration="3780000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Add initial project.">
       <option name="closed" value="true" />
@@ -403,7 +410,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752738904350</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Feat: Use fluent validation on mud blazor input fields.">
+      <option name="closed" value="true" />
+      <created>1752740786682</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1752740786682</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Minor: Move FluentValidationValidator.cs">
+      <option name="closed" value="true" />
+      <created>1752740885103</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1752740885103</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +470,9 @@
     <MESSAGE value="Minor: Update swagger ui" />
     <MESSAGE value="Minor: Add Login.razor on HRIS.Web project" />
     <MESSAGE value="Minor: Add mud blazor ui framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor: Add mud blazor ui framework" />
+    <MESSAGE value="Feat: Use fluent validation on mud blazor input fields." />
+    <MESSAGE value="Minor: Move FluentValidationValidator.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor: Move FluentValidationValidator.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -464,19 +489,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HRIS.Web/Controls/FluentValidationValidator.cs</url>
-          <line>22</line>
-          <properties documentPath="C:\Users\vince\RiderProjects\hrisapp\HRIS\HRIS.Web\Controls\FluentValidationValidator.cs" containingFunctionPresentation="Method 'ValidateModel'">
-            <startOffsets>
-              <option value="702" />
-            </startOffsets>
-            <endOffsets>
-              <option value="720" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

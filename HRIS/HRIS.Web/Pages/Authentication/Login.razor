@@ -1,7 +1,7 @@
 @page "/login"
 @using HRIS.Shared.Models.Users
-@using HRIS.Shared.Validators
 @using HRIS.Web.Services.Contracts
+@using HRIS.Web.Components.Validations
 
 @layout EmptyLayout
 
@@ -12,7 +12,7 @@
 
 <MudContainer MaxWidth="MaxWidth.Small">
     <EditForm Model="_login" OnValidSubmit="HandleLoginAsync">
-        <FluentValidationValidator T="LoginUserDto" Validator="new LoginUserValidator()" />
+        <FluentValidationValidator T="LoginUserDto" />
         <MudGrid>
             <MudItem xs="12">
                 <MudTextField Label="Username of Email"

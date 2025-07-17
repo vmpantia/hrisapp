@@ -7,7 +7,7 @@ namespace HRIS.Web.Components.Validations;
 public class FluentValidationValidator<T> : ComponentBase
 {
     [CascadingParameter] EditContext CurrentEditContext { get; set; }
-    [Parameter] public IValidator Validator { get; set; }
+    [Inject] public IValidator<T> Validator { get; set; }
     
     private ValidationMessageStore _messages;
 
