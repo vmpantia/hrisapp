@@ -2,7 +2,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 
-namespace HRIS.Web.Controls;
+namespace HRIS.Web.Components.Validations;
 
 public class FluentValidationValidator<T> : ComponentBase
 {
