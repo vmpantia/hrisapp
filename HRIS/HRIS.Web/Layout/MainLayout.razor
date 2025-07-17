@@ -1,17 +1,55 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu/>
-    </div>
+@attribute [Authorize]
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
-        <article class="content px-4">
+<MudLayout>
+    <MudAppBar>
+        <AuthorizeView>
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" 
+                           Color="Color.Inherit" 
+                           Edge="Edge.Start" 
+                           OnClick="@((e) => DrawerToggle())" />
+            Human Resource and Information System
+            <MudSpacer />
+            @context.User.Identity?.Name
+            <MudMenu Icon="@Icons.Material.Filled.Person" 
+                     Color="Color.Inherit">
+                <MudMenuItem Icon="@Icons.Material.Filled.Logout" 
+                             Label="Logout" 
+                             Href="/logout" />
+            </MudMenu>
+        </AuthorizeView>
+    </MudAppBar>
+    <MudDrawer @bind-Open="@_drawerOpen">
+        <NavMenu />
+    </MudDrawer>
+    <MudMainContent>
+        <div class="pa-8">
             @Body
-        </article>
-    </main>
-</div>
+        </div>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    [Inject] public NavigationManager NavigationManager { get; set; }
+    [CascadingParameter] public Task<AuthenticationState> AuthenticationState { get; set; }
+
+    bool _drawerOpen = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Get authentication state based on the cascading parameter
+        var state = await AuthenticationState;
+
+        // Redirect user to log in when it's not authenticated
+        if ((state.User.Identity?.IsAuthenticated ?? false) == false)
+            NavigationManager.NavigateTo("/login");
+    }
+
+    private void DrawerToggle() => _drawerOpen = !_drawerOpen;
+}
