@@ -1,21 +1,37 @@
 @page "/login"
 @using HRIS.Shared.Models.Users
+@using HRIS.Shared.Validators
 @using HRIS.Web.Services.Contracts
 
 @layout EmptyLayout
 
-<EditForm Model="_login" FormName="Login" OnValidSubmit="HandleLoginAsync">
-    <DataAnnotationsValidator />
-    <div class="form-group">
-        <label for="username">Username</label>
-        <InputText id="username" class="form-control" @bind-Value="_login.UsernameOrEmailAddress" />
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <InputText id="password" class="form-control" type="password" @bind-Value="_login.Password" />
-    </div>
-    <button type="submit" class="btn btn-primary mt-3">Login</button>
-</EditForm>
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudContainer MaxWidth="MaxWidth.Small">
+    <EditForm Model="_login" OnValidSubmit="HandleLoginAsync">
+        <FluentValidationValidator T="LoginUserDto" Validator="new LoginUserValidator()" />
+        <MudGrid>
+            <MudItem xs="12">
+                <MudTextField Label="Username of Email"
+                              @bind-Value="_login.UsernameOrEmailAddress" For="@(() => _login.UsernameOrEmailAddress)"
+                              Variant="Variant.Outlined"/>
+            </MudItem>
+            <MudItem xs="12">
+                <MudTextField Label="Password"
+                              @bind-Value="_login.Password" For="@(() => _login.Password)"
+                              InputType="InputType.Password" Variant="Variant.Outlined"/>
+            </MudItem>
+            <MudItem xs="12">
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" FullWidth="true">
+                    Login
+                </MudButton>
+            </MudItem>
+        </MudGrid>
+    </EditForm>
+</MudContainer>
 
 @code {
     [Inject] public IAuthenticationService AuthenticationService { get; set; }
