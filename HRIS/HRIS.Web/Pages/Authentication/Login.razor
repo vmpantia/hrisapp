@@ -1,7 +1,6 @@
 @page "/login"
 @using HRIS.Shared.Models.Users
 @using HRIS.Web.Services.Contracts
-@using HRIS.Web.Components.Validations
 
 @layout EmptyLayout
 
@@ -15,14 +14,13 @@
         <FluentValidationValidator T="LoginUserDto" />
         <MudGrid>
             <MudItem xs="12">
-                <MudTextField Label="Username of Email"
-                              @bind-Value="_login.UsernameOrEmailAddress" For="@(() => _login.UsernameOrEmailAddress)"
-                              Variant="Variant.Outlined"/>
+                <TextField Label="Username of Email"
+                           @bind-Value="_login.UsernameOrEmailAddress" For="@(() => _login.UsernameOrEmailAddress)"/>
             </MudItem>
             <MudItem xs="12">
-                <MudTextField Label="Password"
-                              @bind-Value="_login.Password" For="@(() => _login.Password)"
-                              InputType="InputType.Password" Variant="Variant.Outlined"/>
+                <TextField Label="Password"
+                           @bind-Value="_login.Password" For="@(() => _login.Password)"
+                           InputType="InputType.Password"/>
             </MudItem>
             <MudItem xs="12">
                 <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" FullWidth="true">
