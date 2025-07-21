@@ -33,6 +33,7 @@ public class AuthenticationService(IHttpClientProvider httpClientProvider,
         catch (Exception ex)
         {
             logger.LogError($"Error in processing login request | Message: {ex.Message}");
+            throw;
         }
     }
 
